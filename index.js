@@ -1,5 +1,9 @@
 const fs = require("fs");
 const http = require("http");
+const data = require("./Data");
+const path = require("path");
+const events = require("events");
+var eventEmitter = new events.EventEmitter();
 
 // fs.writeFileSync("hi.txt", "this is sample file");
 
@@ -18,15 +22,15 @@ const http = require("http");
 //   })
 //   .listen(8000);
 
-console.log("Your Node Server is running.....");
+// console.log("Your Node Server is running.....");
 
-http
-  .createServer((req, res) => {
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.write(JSON.stringify({ username: "hkrow", name: "prksh" }));
-    res.end();
-  })
-  .listen(8080);
+// http
+//   .createServer((req, res) => {
+//     res.writeHead(200, { "Content-Type": "application/json" });
+//     res.write(JSON.stringify(data));
+//     res.end();
+//   })
+//   .listen(8080);
 
 // fs http buffer core modules of node buffer convert to number format
 
@@ -72,3 +76,68 @@ http
 // });
 
 // console.log(result);
+
+// console.log(process.argv);
+// to sotre histor and arguments
+// const input = process.argv;
+
+// if (input[2] == "add") {
+//   fs.writeFileSync(input[3], input[4]);
+// } else if (input[2] == "remove") {
+//   fs.unlinkSync(input[3]);
+// } else {
+//   console.log("Wrong credentials");
+// }
+
+// functionality to
+
+// const dirpath = path.join(__dirname, "files");
+// console.log(dirpath);
+
+// for (i = 0; i < 5; i++) {
+//   fs.writeFileSync(
+//     dirpath + "/hello" + i + ".txt",
+//     "a simple file demo creation using path module"
+//   );
+// }
+
+// fs.readdir(dirpath, (err, files) => {
+//   console.log(files);
+// });
+
+// fs.readdir(dirpath, (err, files) => {
+//   files.forEach((item) => {
+//     console.log(item);
+//   });
+// });
+
+// const dirpath = path.join(__dirname, "crud");
+// const filepath = `${dirpath}/demo.txt`;
+
+// fs.writeFileSync(filepath, "this is a simple demo file");
+// fs.readFile(filepath, "utf-8", (err, item) => {
+//   console.log(item);
+// });
+
+// fs.appendFile(filepath, " and this is addition of an element", (err) => {
+//   if (!err) {
+//     console.log("working");
+//   }
+// });
+
+// fs.rename(filepath, `${dirpath}/testing.txt`, (err) => {
+//   if (!err) {
+//     console.log("File renamed");
+//   }
+// });
+
+// fs.unlinkSync(`${dirpath}/testing.txt`);
+
+// var myEventHandler = function () {
+//   console.log("I hear the scream");
+// };
+
+// eventEmitter.on("click", myEventHandler);
+// eventEmitter.emit("click");
+
+//event is used to handle the producing and consuming code

@@ -1,0 +1,21 @@
+doctype html 
+html 
+head 
+title='hello pug'
+body 
+    p.greetings#people Hello world 
+
+    //- space separated
+    h1 welcome to the pug 
+
+    //- piped text
+    div
+    |using this pipe we have to insert multiple lines of text,
+    | the pipe symbol is a standing line (|)
+
+    //- Blocked text
+    div
+    that gets tedious if you have lot of text,
+    you can use "." at the end to denote the block of text.
+    To put tags inside this block, simply ener tag in a new line and
+    indent it accourdingly.
