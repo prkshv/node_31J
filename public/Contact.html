@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Contact:1234567890</h1>
+    <form onsubmit="MyFunction()" name="myForm">
+      <input type="text" placeholder="Name" name="user" />
+      <input type="text" placeholder="Email" name="email" />
+      <input type="text" placeholder="Mobile No." name="no" /><br />
+      <button type="submit">Send</button>
+    </form>
+    <script>
+      const MyFunction = () => {
+        let name = document.myForm.user.value;
+        let email = document.myForm.email.value;
+        let number = document.myForm.no.value;
+        console.log(name, email, number);
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+        localStorage.setItem("number", number);
+      };
+    </script>
+  </body>
+</html>
