@@ -1,0 +1,36 @@
+to create new database
+-> use dbname
+-> user nodej
+
+to create new collection inside database
+-> db.createCollection
+
+to view all the collections inside the database
+-> show collections
+
+to insert single data at a time:
+-> db.collectionname.insertone({vlaues})
+-> db.userData.insertOne({name:'Test',email:'testing@gmail.com',phone:'1234567890'}) -> insert data
+
+to insert many data at the same time
+-> db.userData.insertMany([{name:'newuser',email:'newuser@gmail.com',phone:'12345'},{name:'currentuser',email:'currentuser@gmail.com',phone:'09876'}])
+
+to find data
+// return all the data available
+-> db.collectionname.find()
+-> db.userData.find()
+
+to update data
+// $set to update
+// $-> to access the function
+-> db.collectionname.updateOne({key},{$set:{newvalue}})
+-> db.userData.updateOne({name:'currentuser'},{$set:{email:'changedcurrentuser@gmail.com'}})
+
+to delete data
+-> db.collectionname.deleteOne({key})
+-> db.userData.deleteOne({name:'newuser'})
+
+using mongodb://localhost:27017 as your mongodb url might give error
+to fix it change localhost with 127.0.0.1 mongodb://127.0.0.1:27017
+
+use await if output is giving promise pending
