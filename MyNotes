@@ -34,3 +34,18 @@ using mongodb://localhost:27017 as your mongodb url might give error
 to fix it change localhost with 127.0.0.1 mongodb://127.0.0.1:27017
 
 use await if output is giving promise pending
+
+module: sends fragment of code/function isstead of whole file
+
+representation transfer data REST
+
+can give control to user in graphql
+more control to server in rest api
+
+- rest/restful
+- graphql
+- grptc google protocol
+
+what is soap??
+
+embedded datatypes:
