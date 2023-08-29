@@ -8,7 +8,7 @@ const database = "nodej"; //database name
 let dbConnection = async () => {
   let result = await client.connect();
   let db = result.db(database);
-  return db.collection("userData");
+  return db.collection("userdatas");
 };
 module.exports = dbConnection;
 

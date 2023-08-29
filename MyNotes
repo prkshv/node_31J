@@ -49,3 +49,6 @@ more control to server in rest api
 what is soap??
 
 embedded datatypes:
+
+
+mongoose: provide schema model(validation)
